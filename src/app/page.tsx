@@ -1,103 +1,102 @@
+"use client";
+
+import Link from "next/link";
+import { useTexts } from "../hooks/useTexts";
 import Image from "next/image";
+import {Button} from "../components/Button";
 
 export default function Home() {
+  const t = useTexts();
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-[calc(100vh-14rem)]">
+      <section className="relative flex flex-col items-center justify-center text-center min-h-[calc(100vh-7rem)] px-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 max-w-3xl">
+          {t.heroTitle}
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-black/70 dark:text-white/70 mb-8 max-w-2xl">
+          {t.heroSubtitle}
+        </p>
+        <Button asChild>
+          <Link href="/apply">{t.heroApply}</Link>
+        </Button>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section className="max-w-5xl mx-auto px-6 py-12">
+        <h2 className="text-2xl font-semibold mb-2">{t.sectionProducts}</h2>
+        <p className="text-sm text-black/70 dark:text-white/70 mb-6">{t.sectionIntro}</p>
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/5 dark:bg-white/5">
+            <h3 className="text-lg font-semibold mb-1">{t.memorialName}</h3>
+            <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.memorialDesc}</p>
+            <div className="flex gap-3">
+              <Button asChild>
+                <Link href="/memorial">{t.viewDetails}</Link>
+              </Button>
+              {t.memorialDomain ? (
+                <Button asChild>
+                  <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
+                </Button>
+              ) : null}
+            </div>
+          </div>
+
+          <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/5 dark:bg-white/5">
+            <h3 className="text-lg font-semibold mb-1">{t.cloudName}</h3>
+            <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.cloudDesc}</p>
+            <div className="flex gap-3">
+              <Button asChild>
+                <Link href="/cloud">{t.viewDetails}</Link>
+              </Button>
+              {t.cloudDomain ? (
+                <Button asChild>
+                  <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
+                </Button>
+              ) : null}
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto px-6 pb-24">
+        <h2 className="text-2xl font-semibold mb-2">{t.galleryTitle}</h2>
+        <p className="text-sm text-black/70 dark:text-white/70 mb-6">
+          <span className="italic">{t.galleryQuoteEn}</span> —— {t.galleryQuoteZh}
+        </p>
+        <p className="text-sm text-black/70 dark:text-white/70 mb-10">{t.galleryDesc}</p>
+
+        {/* 左右左 - 1 */}
+        <div className="grid gap-6 sm:grid-cols-2 items-center mb-10">
+          <div className="order-1 overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
+            <Image src="/disease.webp" alt={t.imgDiseaseAlt} width={1200} height={900} className="w-full h-auto grayscale" />
+          </div>
+          <div className="order-2">
+            <h3 className="text-lg font-semibold mb-2">{t.imgDiseaseTitle}</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">{t.imgDiseaseText}</p>
+          </div>
+        </div>
+
+        {/* 左右左 - 2（翻转） */}
+        <div className="grid gap-6 sm:grid-cols-2 items-center mb-10">
+          <div className="sm:order-2 order-1 overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
+            <Image src="/warfare.webp" alt={t.imgWarfareAlt} width={1200} height={900} className="w-full h-auto grayscale" />
+          </div>
+          <div className="sm:order-1 order-2">
+            <h3 className="text-lg font-semibold mb-2">{t.imgWarfareTitle}</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">{t.imgWarfareText}</p>
+          </div>
+        </div>
+
+        {/* 左右左 - 3 */}
+        <div className="grid gap-6 sm:grid-cols-2 items-center">
+          <div className="order-1 overflow-hidden rounded-lg border border-black/10 dark:border-white/10">
+            <Image src="/warfare2.webp" alt={t.imgWarfare2Alt} width={1200} height={900} className="w-full h-auto grayscale" />
+          </div>
+          <div className="order-2">
+            <h3 className="text-lg font-semibold mb-2">{t.imgWarfare2Title}</h3>
+            <p className="text-sm text-black/70 dark:text-white/70">{t.imgWarfare2Text}</p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
