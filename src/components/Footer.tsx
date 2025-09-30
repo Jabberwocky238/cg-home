@@ -13,14 +13,14 @@ function FooterItem({ title, body }: { title: string; body: ReadonlyArray<string
   return (
     <Drawer open={open} onOpenChange={setOpen} >
       <DrawerTrigger asChild>
-        <button className="w-full text-left text-sm text-black/70 dark:text-white/70 hover:cursor-pointer">{title}</button>
+        <button className="w-full text-left text-sm hover:cursor-pointer">{title}</button>
       </DrawerTrigger>
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>{title}</DrawerTitle>
         </DrawerHeader>
         <DrawerBody>
-          <div className="space-y-3 text-sm text-black/80 dark:text-white/80">
+          <div className="space-y-3 text-sm">
             {body.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -38,9 +38,9 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 grid grid-cols-1 sm:grid-cols-3 gap-6">
         {/* 第一列：版权、公司名与社交链接 */}
         <div className="space-y-3">
-          <div className="text-sm text-black/70 dark:text-white/70">{t.footerCopyright}</div>
+          <div className="text-sm">{t.footerCopyright}</div>
           <div className="text-base font-semibold">{t.appName}</div>
-          <div className="flex items-center gap-3 text-black/70 dark:text-white/70">
+          <div className="flex items-center gap-3">
             <Link href="#" aria-label="X" className="hover:opacity-90"><RiTwitterXFill className="size-5" /></Link>
             <Link href="#" aria-label="GitHub" className="hover:opacity-90"><RiGithubFill className="size-5" /></Link>
             <Link href="#" aria-label="YouTube" className="hover:opacity-90"><RiYoutubeFill className="size-5" /></Link>
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-center text-sm text-black/60 dark:text-white/60" />
+      <div className="mx-auto max-w-6xl px-4 h-12 flex items-center justify-center text-sm" />
     </footer>
   );
 }

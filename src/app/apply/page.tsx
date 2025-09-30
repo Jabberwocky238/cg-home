@@ -11,7 +11,7 @@ export default function ApplyPage() {
   return (
     <main className="max-w-2xl mx-auto px-6 py-12">
       <h1 className="text-3xl font-bold mb-6">{t.heroApply}</h1>
-      <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.applyCustomNote}</p>
+      <p className="text-sm mb-4">{t.applyCustomNote}</p>
       <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/5 dark:bg-white/5">
         <form className="space-y-4">
           <div className="space-y-1">

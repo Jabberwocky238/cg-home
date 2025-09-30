@@ -16,9 +16,9 @@ export default function CloudPage() {
         {/* 文案容器：移动端在下，桌面端在左 */}
         <div className="order-1 p-4">
           <h1 className="text-3xl font-bold mb-4">{t.cloudTitle}</h1>
-          <p className="mb-3 text-black/80 dark:text-white/80">{t.cloudP1}</p>
-          <p className="mb-3 text-black/80 dark:text-white/80">{t.cloudP2}</p>
-          <p className="mb-6 text-black/80 dark:text-white/80">{t.cloudP3}</p>
+          <p className="mb-3">{t.cloudP1}</p>
+          <p className="mb-3">{t.cloudP2}</p>
+          <p className="mb-6">{t.cloudP3}</p>
           <div className="flex gap-3">
             <Button variant="ghost" className="bg-white/10" asChild>
               <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer">{t.cloudName}  </Link>

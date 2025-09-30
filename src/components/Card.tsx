@@ -20,7 +20,7 @@ export function Card({ title, href, action, children }: CardProps) {
     >
       <h3 className="text-lg font-semibold mb-1">{title}</h3>
       {children ? (
-        <div className="text-sm flex-grow text-black/70 dark:text-white/70 mb-4">{children}</div>
+        <div className="text-sm flex-grow mb-4">{children}</div>
       ) : null}
       {action ? <div className="flex gap-3">{action}</div> : null}
     </div>

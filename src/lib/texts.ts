@@ -16,6 +16,8 @@ export const texts = {
   visitSite: "访问站点",
   memorialDomain: "",
   cloudDomain: "",
+  // 主题切换
+  toggleTheme: "切换主题",
   // 追忆廊说明
   memorialTitle: "追忆廊：去中心化的纪念与记录",
   memorialP1: "追忆廊是一个混合 Web3 和 Web2 的文章平台，用户可以发送人物生平信息、图片等内容。",

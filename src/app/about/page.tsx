@@ -8,8 +8,8 @@ export default function AboutPage() {
     <main className="max-w-5xl mx-auto px-6 py-12 space-y-10">
       <section className="space-y-3">
         <h1 className="text-3xl font-bold">{t.aboutTitle}</h1>
-        <p className="text-black/80 dark:text-white/80">{t.aboutMission}</p>
-        <p className="text-black/80 dark:text-white/80">{t.aboutWhatWeDo}</p>
+        <p>{t.aboutMission}</p>
+        <p>{t.aboutWhatWeDo}</p>
       </section>
 
       <section className="space-y-4">
@@ -18,8 +18,8 @@ export default function AboutPage() {
           {t.teamMembers.map((m) => (
             <li key={m.name} className="rounded-xl border border-black/10 dark:border-white/10 p-4">
               <p className="font-medium">{m.name}</p>
-              <p className="text-sm text-black/60 dark:text-white/60">{m.role}</p>
-              <p className="mt-2 text-sm text-black/80 dark:text-white/80">{m.desc}</p>
+              <p className="text-sm opacity-60">{m.role}</p>
+              <p className="mt-2 text-sm">{m.desc}</p>
             </li>
           ))}
         </ul>

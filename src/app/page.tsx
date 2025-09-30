@@ -15,7 +15,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 max-w-3xl">
           {t.heroTitle}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-black/70 dark:text-white/70 mb-8 max-w-2xl">
+        <p className="text-base sm:text-lg md:text-xl mb-8 max-w-2xl">
           {t.heroSubtitle}
         </p>
         <Button asChild className="bg-white/10 px-4 py-2" variant="ghost">
@@ -25,7 +25,7 @@ export default function Home() {
 
       <section className="max-w-5xl mx-auto px-6 py-12">
         <h2 className="text-2xl font-semibold mb-2">{t.sectionProducts}</h2>
-        <p className="text-sm text-black/70 dark:text-white/70 mb-6">{t.sectionIntro}</p>
+        <p className="text-sm mb-6">{t.sectionIntro}</p>
         <div className="grid gap-6 sm:grid-cols-2">
           <Card
             title={t.memorialName}
@@ -61,10 +61,10 @@ export default function Home() {
 
       <section className="max-w-5xl mx-auto px-6 pb-24">
         <h2 className="text-2xl font-semibold mb-2">{t.galleryTitle}</h2>
-        <p className="text-sm text-black/70 dark:text-white/70 mb-6">
+        <p className="text-sm mb-6">
           <span className="italic">{t.galleryQuoteEn}</span> —— {t.galleryQuoteZh}
         </p>
-        <p className="text-sm text-black/70 dark:text-white/70 mb-10">{t.galleryDesc}</p>
+        <p className="text-sm mb-10">{t.galleryDesc}</p>
 
         {/* 左右左 - 1 */}
         <div className="grid gap-6 sm:grid-cols-2 items-center mb-10">
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
           <div className="order-2">
             <h3 className="text-lg font-semibold mb-2">{t.imgDiseaseTitle}</h3>
-            <p className="text-sm text-black/70 dark:text-white/70">{t.imgDiseaseText}</p>
+            <p className="text-sm">{t.imgDiseaseText}</p>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           <div className="sm:order-1 order-2">
             <h3 className="text-lg font-semibold mb-2">{t.imgWarfareTitle}</h3>
-            <p className="text-sm text-black/70 dark:text-white/70">{t.imgWarfareText}</p>
+            <p className="text-sm">{t.imgWarfareText}</p>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
           </div>
           <div className="order-2">
             <h3 className="text-lg font-semibold mb-2">{t.imgWarfare2Title}</h3>
-            <p className="text-sm text-black/70 dark:text-white/70">{t.imgWarfare2Text}</p>
+            <p className="text-sm">{t.imgWarfare2Text}</p>
           </div>
         </div>
       </section>
