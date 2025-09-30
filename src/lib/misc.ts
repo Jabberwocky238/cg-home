@@ -1,4 +1,4 @@
-ggexport const misc = {
+export const misc = {
   howItWorksTitle: "如何运作",
   howItWorksBody: [
     "CloudGrave 以极简与隐私为先的原则设计。您在追忆廊发布的图文将上载至 Web3 Arweave 网络，形成不可篡改的去中心化存证；云祭奠的空间配置与交互数据，将直接上链，不经过我们的中转存储。",
