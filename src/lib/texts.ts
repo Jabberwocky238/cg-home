@@ -53,7 +53,7 @@ export const texts = {
   imgWarfare2Text: "当喧嚣散尽，世界需要一种温柔的方式，去安放悲伤与爱。",
   
   // 版权
-  footerCopyright: "© "+new Date().getFullYear()+" 企业主页"
+  footerCopyright: "© "+new Date().getFullYear()+" CloudGrave Corp."
 } as const;
 
 

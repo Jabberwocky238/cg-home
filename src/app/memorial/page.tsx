@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useTexts } from "../../hooks/useTexts";
 import Image from "next/image";
-import {Button} from "../../components/Button";
+import { Button } from "@/components/Button";
+import { useMediaQuery } from 'react-responsive'
 
 export default function MemorialPage() {
   const t = useTexts();
@@ -20,13 +21,10 @@ export default function MemorialPage() {
           <p className="text-sm mb-2">{t.memorialP2}</p>
           <p className="text-sm mb-4">{t.memorialP3}</p>
           <div className="flex gap-3">
-            <Link href="/" className="px-3 py-1.5 rounded border border-black/15 dark:border-white/15 hover:bg-black/5 dark:hover:bg-white/5">
-              {t.backHome}
-            </Link>
             {t.memorialDomain ? (
-              <a href={t.memorialDomain} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 rounded bg-foreground text-background">
-                {t.visitSite}
-              </a>
+              <Button asChild>
+                <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
+              </Button>
             ) : null}
           </div>
         </div>
@@ -40,16 +38,10 @@ export default function MemorialPage() {
           <p className="mb-3 text-black/80 dark:text-white/80">{t.memorialP2}</p>
           <p className="mb-6 text-black/80 dark:text-white/80">{t.memorialP3}</p>
           <div className="flex gap-3">
-            <Button asChild>
-              <Link href="/">{t.backHome}</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/cloud">{t.cloudName}</Link>
-            </Button>
+            <Link href="/"> {t.backHome} </Link>
+            <Link href="/cloud"> {t.cloudName} </Link>
             {t.memorialDomain ? (
-              <Button asChild>
-                <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
-              </Button>
+              <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
             ) : null}
           </div>
         </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useTexts } from "../hooks/useTexts";
 import Image from "next/image";
-import {Button} from "../components/Button";
+ 
 
 export default function Home() {
   const t = useTexts();
@@ -16,9 +16,7 @@ export default function Home() {
         <p className="text-base sm:text-lg md:text-xl text-black/70 dark:text-white/70 mb-8 max-w-2xl">
           {t.heroSubtitle}
         </p>
-        <Button asChild>
-          <Link href="/apply">{t.heroApply}</Link>
-        </Button>
+        <Link href="/apply"> {t.heroApply} </Link>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-12">
@@ -29,13 +27,9 @@ export default function Home() {
             <h3 className="text-lg font-semibold mb-1">{t.memorialName}</h3>
             <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.memorialDesc}</p>
             <div className="flex gap-3">
-              <Button asChild>
-                <Link href="/memorial">{t.viewDetails}</Link>
-              </Button>
+              <Link href="/memorial"> {t.viewDetails} </Link>
               {t.memorialDomain ? (
-                <Button asChild>
-                  <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
-                </Button>
+                <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
               ) : null}
             </div>
           </div>
@@ -44,13 +38,9 @@ export default function Home() {
             <h3 className="text-lg font-semibold mb-1">{t.cloudName}</h3>
             <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.cloudDesc}</p>
             <div className="flex gap-3">
-              <Button asChild>
-                <Link href="/cloud">{t.viewDetails}</Link>
-              </Button>
+              <Link href="/cloud"> {t.viewDetails} </Link>
               {t.cloudDomain ? (
-                <Button asChild>
-                  <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
-                </Button>
+                <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
               ) : null}
             </div>
           </div>

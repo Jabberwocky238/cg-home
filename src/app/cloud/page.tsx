@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useTexts } from "../../hooks/useTexts";
 import Image from "next/image";
-import { Button } from "../../components/Button";
+import { Button, buttonVariants } from "@/components/Button";
+
 
 export default function CloudPage() {
   const t = useTexts();
@@ -21,15 +22,10 @@ export default function CloudPage() {
           <p className="text-sm mb-4">{t.cloudP3}</p>
           <div className="flex gap-3">
             <Button asChild>
-              <Link href="/">{t.backHome}</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/memorial">{t.memorialName}</Link>
+              <Link href="/memorial" className={buttonVariants()}> {t.memorialName} </Link>
             </Button>
             {t.cloudDomain ? (
-              <Button asChild>
-                <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
-              </Button>
+              <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
             ) : null}
           </div>
         </div>
@@ -43,16 +39,10 @@ export default function CloudPage() {
           <p className="mb-3 text-black/80 dark:text-white/80">{t.cloudP2}</p>
           <p className="mb-6 text-black/80 dark:text-white/80">{t.cloudP3}</p>
           <div className="flex gap-3">
-            <Button asChild>
-              <Link href="/">{t.backHome}</Link>
-            </Button>
-            <Button asChild>
-              <Link href="/memorial">{t.memorialName}</Link>
-            </Button>
+            <Link href="/"> {t.backHome} </Link>
+            <Link href="/memorial"> {t.memorialName} </Link>
             {t.cloudDomain ? (
-              <Button asChild>
-                <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer">{t.visitSite}</Link>
-              </Button>
+              <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
             ) : null}
           </div>
         </div>
