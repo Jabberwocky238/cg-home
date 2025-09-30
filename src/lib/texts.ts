@@ -54,6 +54,16 @@ export const texts = {
   
   // 版权
   footerCopyright: "© "+new Date().getFullYear()+" CloudGrave Corp."
+  ,
+  // 关于我们
+  aboutTitle: "关于 CloudGrave",
+  aboutMission: "我们希望为因疾病与战争离世的亲人，留存可被轻触的记忆与可被守护的隐私。",
+  aboutWhatWeDo: "我们构建了两项核心服务：去中心化的追忆廊与上链的云祭奠。前者将文字与图片存入 Arweave，后者以数字孪生承载对话与陪伴，数据直达链上。",
+  aboutTeamTitle: "我们的团队",
+  teamMembers: [
+    { name: "Wesley", role: "前端/产品/体验", desc: "关注告别仪式的温度与简单，减少每一次点击背后的负担。" },
+    { name: "Quan", role: "后端/链上/可访问性", desc: "确保数据可验证与可取回，让隐私只属于家属。" },
+  ]
 } as const;
 
 

@@ -55,7 +55,7 @@ export default function Footer() {
             <Link href="/memorial">{t.memorialName}</Link>
             <Link href="/cloud">{t.cloudName}</Link>
             <Link href="/apply">联系我们</Link>
-            <Link href="/">我们是谁</Link>
+            <Link href="/about">我们是谁</Link>
           </div>
         </div>
 

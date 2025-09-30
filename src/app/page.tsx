@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTexts } from "../hooks/useTexts";
 import Image from "next/image";
+import { Card } from "@/components/Card";
  
 
 export default function Home() {
@@ -23,27 +24,35 @@ export default function Home() {
         <h2 className="text-2xl font-semibold mb-2">{t.sectionProducts}</h2>
         <p className="text-sm text-black/70 dark:text-white/70 mb-6">{t.sectionIntro}</p>
         <div className="grid gap-6 sm:grid-cols-2">
-          <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/5 dark:bg-white/5">
-            <h3 className="text-lg font-semibold mb-1">{t.memorialName}</h3>
-            <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.memorialDesc}</p>
-            <div className="flex gap-3">
-              <Link href="/memorial"> {t.viewDetails} </Link>
-              {t.memorialDomain ? (
-                <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
-              ) : null}
-            </div>
-          </div>
+          <Card
+            title={t.memorialName}
+            href="/memorial"
+            action={
+              <>
+                <Link href="/memorial"> {t.viewDetails} </Link>
+                {t.memorialDomain ? (
+                  <Link href={t.memorialDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
+                ) : null}
+              </>
+            }
+          >
+            {t.memorialDesc}
+          </Card>
 
-          <div className="rounded-xl border border-black/10 dark:border-white/10 p-6 bg-white/5 dark:bg-white/5">
-            <h3 className="text-lg font-semibold mb-1">{t.cloudName}</h3>
-            <p className="text-sm text-black/70 dark:text-white/70 mb-4">{t.cloudDesc}</p>
-            <div className="flex gap-3">
-              <Link href="/cloud"> {t.viewDetails} </Link>
-              {t.cloudDomain ? (
-                <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
-              ) : null}
-            </div>
-          </div>
+          <Card
+            title={t.cloudName}
+            href="/cloud"
+            action={
+              <>
+                <Link href="/cloud"> {t.viewDetails} </Link>
+                {t.cloudDomain ? (
+                  <Link href={t.cloudDomain} target="_blank" rel="noopener noreferrer"> {t.visitSite} </Link>
+                ) : null}
+              </>
+            }
+          >
+            {t.cloudDesc}
+          </Card>
         </div>
       </section>
 
