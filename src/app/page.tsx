@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useTexts } from "../hooks/useTexts";
 import Image from "next/image";
 import { Card } from "@/components/Card";
- 
+import { Button } from "@/components/Button";
+
 
 export default function Home() {
   const t = useTexts();
@@ -17,7 +18,9 @@ export default function Home() {
         <p className="text-base sm:text-lg md:text-xl text-black/70 dark:text-white/70 mb-8 max-w-2xl">
           {t.heroSubtitle}
         </p>
-        <Link href="/apply"> {t.heroApply} </Link>
+        <Button asChild className="bg-white/10 px-4 py-2" variant="ghost">
+          <Link href="/apply"> {t.heroApply} </Link>
+        </Button>
       </section>
 
       <section className="max-w-5xl mx-auto px-6 py-12">
