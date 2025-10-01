@@ -4,8 +4,8 @@ export const texts = {
   navMemorial: "追忆廊",
   navCloud: "云祭奠",
 
-  heroTitle: "为您的亲人打造更快的回忆空间",
-  heroSubtitle: "我们提供简单、可靠、可扩展的解决方案，助力亲人高效回忆。",
+  heroTitle: "为您打造更温馨的回忆空间",
+  heroSubtitle: "死亡不是终点，遗忘才是。",
   heroApply: "立即申请",
   // 产品与跳转
   memorialName: "追忆廊",
@@ -19,7 +19,7 @@ export const texts = {
   // 主题切换
   toggleTheme: "切换主题",
   // 追忆廊说明
-  memorialTitle: "追忆廊：去中心化的纪念与记录",
+  memorialTitle: "追忆廊：去中心化的纪念与记录空间",
   memorialP1: "追忆廊是一个混合 Web3 和 Web2 的文章平台，用户可以发送人物生平信息、图片等内容。",
   memorialP2: "所有文章将存储到 Web3 Arweave 链，完全去中心化，任何人都可以永久访问。",
   memorialP3: "人们可以在此祭奠与献花，需要支付一定费用。我们不会全部获取，而是将其转化为等额的币替您保管，您可随时取出。",
@@ -40,7 +40,7 @@ export const texts = {
   applyCustomNote: "如您有更为个性化的定制需求，期待与我们进一步沟通，我们将为您提供细致、私密且有温度的专属服务。",
   // 图片与引言
   galleryTitle: "纪念与思考",
-  galleryQuoteEn: "Death is not the end",
+  galleryQuoteEn: "Death is not the end, forgetting is.",
   galleryQuoteZh: "死亡不是生命的终点",
   galleryDesc: "我们用黑白影像，铭记因疾病与战争离去的生命。愿记忆延续，愿爱不止。",
   imgDiseaseAlt: "疾病带来的离别",
